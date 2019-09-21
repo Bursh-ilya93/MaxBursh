@@ -1,0 +1,253 @@
+$url: '../images/payments/';
+$extension: '.png';
+$page_width: 750px;
+$green-color: #0a9f30;
+
+.payments-page {
+  font-family: Roboto, 'sans-serif';
+  &__menu {
+    display: block;
+    height: 1px;
+    opacity: 0;
+  }
+
+  &__main {
+    display: flex;
+    min-width: 1270px;
+    max-width: 1270px;
+
+    & > div:first-child(2) {
+
+    }
+
+    &-title {
+      min-width: 1042px;
+      max-width: 1042px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: normal;
+      color: #129A48;
+      margin-bottom: 30px;
+    }
+
+    &-content {
+      width: 100%;
+    }
+  }
+}
+
+.payments {
+  margin-bottom: 60px;
+
+  &__items {
+    background: #FFFFFF;
+
+    & a {
+      color: $green-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__item {
+      & ul {
+        margin-top: 10px;
+
+        & li {
+          list-style-type: circle;
+          //padding: 0 0 0 10px;
+          margin-left: 20px;
+        }
+      }
+
+      padding: 10px 20px;
+      color: #363636;
+      line-height: 1.5;
+      border-bottom: 1px solid #129A48;
+      cursor: pointer;
+
+      & .title {
+        position: relative;
+        font-size: 16px;
+        color: #575756;
+        //color: #57154b;
+        font-family: 'RobotoBold';
+
+        @mixin item-logo($path) {
+          &:before {
+            content: '';
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background: url($path) no-repeat center center;
+            background-size: contain;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        & p {
+          position: relative;
+          margin-left: 125px;
+          font-weight: bold;
+          font-size: 18px;
+          color: #000000;
+
+          &:after {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: '';
+            background: url("../images/arrow-payments.svg");
+            background-size: 16px 16px;
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        $url: '../images/payments/';
+        $extension: '.png';
+
+        &.visa-master {
+          @include item-logo($url + 'visa-mastercard' + $extension);
+        }
+
+        &.qiwi {
+          @include item-logo($url + 'qiwi' + $extension);
+        }
+
+        &.agava {
+          @include item-logo($url + 'agava' + $extension);
+        }
+
+        &.erip {
+          @include item-logo($url + 'erip_logo' + $extension);
+        }
+
+        &.sviaznoi {
+          @include item-logo($url + 'sviaznoi' + $extension);
+        }
+
+        &.evroset {
+          @include item-logo($url + 'evroset' + $extension);
+        }
+
+        &.ipay {
+          @include item-logo($url + 'ipay_logo' + $extension);
+        }
+
+        &.pps {
+          @include item-logo($url + 'logo' + $extension);
+          width: 100%;
+        }
+
+        &.belinvestbank {
+          @include item-logo($url + 'bib_logo' + $extension);
+        }
+
+        &.belarusbank {
+          @include item-logo($url + 'belarusbank' + $extension);
+        }
+
+        &.belagro {
+          @include item-logo($url + 'bapb-logo' + $extension);
+        }
+
+        &.priorbank {
+          @include item-logo($url + 'priorbank' + $extension);
+        }
+
+        &.bps-bank {
+          @include item-logo($url + 'bps-bank' + $extension);
+        }
+
+        &.techno-bank {
+          @include item-logo($url + 'tehnobank' + $extension);
+        }
+
+        &.belweb {
+          @include item-logo($url + 'belveb' + $extension);
+        }
+
+        &.mtbank {
+          @include item-logo($url + 'mtbank' + $extension);
+        }
+
+        &.belgazprombank {
+          @include item-logo($url + 'belgazprombank' + $extension);
+        }
+
+        &.bank-solution {
+          @include item-logo($url + 'reshenie_logo' + $extension);
+        }
+
+        &.paritetbank {
+          @include item-logo($url + 'paritet' + $extension);
+        }
+
+        &.dabrabit {
+          @include item-logo($url + 'dabr' + $extension);
+        }
+
+        &.alfa {
+          @include item-logo($url + 'Alfa-Bank' + $extension);
+        }
+
+      }
+
+      & .attention-data.hidden {
+        padding: 10px 10px 10px 40px;
+        color: #ED1C24;
+        border: 1px dashed #ED1C24;
+        width: 100%;
+
+        p, ul {
+          text-indent: 0;
+          color: #ED1C24;
+        }
+
+        &::before {
+          left: 7px;
+        }
+      }
+
+      & .note {
+        margin-top: 10px;
+        padding: 10px;
+        background: #fff9df;
+        border: 1px dashed #fff297;
+      }
+
+      & .hidden {
+        text-indent: 10px;
+        padding: 25px 0 5px 5px;
+        display: none;
+        font-size: 16px;
+        color: #000000;
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+
+      &.active {
+        & .hidden {
+          display: block;
+        }
+
+        & .title {
+          & p {
+            &:after {
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

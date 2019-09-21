@@ -1,0 +1,142 @@
+.input {
+  position: relative;
+  outline: none;
+  width: 121px;
+  height: 26px;
+  background: #F7F7F7;
+  font-size: 12px;
+  text-indent: 10px;
+  color: #222222;
+  padding: 0;
+  border-color: #51BF7D;;
+  border-width: 0;
+  transition: border-width 10s linear;
+
+  &:focus {
+    border-bottom-width: 3px;
+  }
+
+
+  &-filter {
+    font-family: Roboto, 'sans-serif';
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    text-indent: 10px;
+    width: 100%;
+    border-radius: 0 !important;
+    background: #FFFFFF;
+    padding-left: 0 !important;
+
+    & > .text {
+      position: relative;
+      left: -10px;
+      font-size: 13px;
+      color: #222222;
+    }
+
+    .item {
+      height: 30px;
+      padding-left: 0 !important;
+      border: 0;
+
+      &:hover {
+        background: #51BF7D !important;
+        color: #FFFFFF !important;
+      }
+    }
+
+    &:after {
+      content: "";
+      background-image: url('../images/arrow.svg');
+      background-size: 10px 10px;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      right: 13px;
+      top: 9px;
+      transform: rotate(90deg);
+    }
+
+    i.icon:before {
+      content: "" !important;
+    }
+
+    .menu {
+      height: 200px;
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #E2E2E2;
+        width: 5px
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        position: relative;
+        left: -1px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #51BF7D;
+        height: 20px;
+
+        &:hover {
+          cursor:pointer;
+        }
+      }
+    }
+  }
+}
+
+.ui.checkbox  {
+  label {
+    position: relative;
+    top: 1px;
+    font-size: 14px;
+    padding-left: 30px;
+
+    &:before {
+      left: 5px;
+      border: 1px solid #129A48 !important;
+      border-radius: 0 !important;
+      background: #f7f7f7;
+      top: -3px;
+    }
+
+    &:after {
+      top: -3px;
+      left: 5px;
+      color: #129A48 !important;
+    }
+  }
+
+  input[type=checkbox]:checked + label {
+    &::before {
+      background: #129A48;
+    }
+
+    &::after {
+      top: 1px;
+      transform: rotate(-26deg);
+      color: #E8E8E8 !important;
+    }
+  }
+}
+
+.ui.selection.dropdown .menu>.item {
+
+}
+
+.ui.selection.dropdown {
+  border: none;
+}
+
+.ui.selection.dropdown .menu>.item {
+  border: 0;
+}

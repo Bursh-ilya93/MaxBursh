@@ -1,0 +1,40 @@
+.results-live {
+  flex: 2 1;
+  margin: 0 5px 50px 5px;
+
+  .events-head {
+    p {
+      &.time{
+        width: 10%;
+      }
+
+      &.event{
+        width: 45%;
+      }
+
+      &.result{
+        width: 45%;
+      }
+    }
+  }
+
+  .events-body {
+    .event {
+      .time {
+        width: 10%;
+        float: left;
+      }
+
+      .name-event {
+        width: 45%;
+        float: left;
+      }
+
+      .result{
+        color: #FF0000;
+        width: 45%;
+        font-weight: bold;
+      }
+    }
+  }
+}

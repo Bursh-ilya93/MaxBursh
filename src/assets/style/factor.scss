@@ -1,0 +1,43 @@
+.factor {
+  cursor: pointer;
+
+  &:hover {
+    //color: #fff;
+  }
+
+
+  &.active {
+    background: $accent-color;
+    color: #fff;
+  }
+
+  &-colorize {
+
+    @mixin factor-arrow {
+      $size: 10px;
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: $size;
+      height: $size;
+    }
+
+    &-up {
+      &:after {
+        @include factor-arrow;
+        background: url('../images/factor/up.svg') 0 4px no-repeat;
+        background-size: contain;
+        right: 10px;
+      }
+    }
+
+    &-down {
+      &:after {
+        @include factor-arrow;
+        background: url('../images/factor/down.svg') 0 -3px no-repeat;
+        background-size: contain;
+        left: 10px;
+      }
+    }
+  }
+}

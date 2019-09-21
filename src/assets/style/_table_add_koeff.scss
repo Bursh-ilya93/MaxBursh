@@ -1,0 +1,169 @@
+.table-add-factors {
+  padding-left: 0;
+  background: #F7F7F7;
+
+  .navigation {
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background: #F7F7F7;
+
+    &__column {
+      width: calc(100% / 3);
+
+      & > button {
+        &:first-child {
+          border-bottom: 1px solid #C4C4C4;
+        }
+      }
+
+      &:last-child button:last-child {
+        border-right: none;
+        //width: calc(100% / 4 + 5px);
+      }
+    }
+
+    button {
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      background: #E8E8E8;
+      font-weight: normal;
+      line-height: 21px;
+      font-size: 14px;
+      height: 30px;
+      display: block;
+      border-radius: 0;
+      color: #222222;
+      border-right: 1px solid #C4C4C4;
+      outline: 0 !important;
+
+      &:last-child {
+
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+
+      &:hover {
+        background: #51BF7D;
+        font-weight: bold !important;
+        color: #222222 !important;
+        position: relative;
+        z-index: 2;
+      }
+
+      &.active {
+        font-weight: bold;
+        background: #C4C4C4;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+      }
+    }
+  }
+
+  .factor-name {
+    margin-bottom: 1px;
+    height: 30px;
+    background: #E8E8E8;
+    text-align: left;
+
+    .checkbox {
+      height: 30px;
+      padding: 8px 10px;
+
+      label {
+        position: relative;
+        top: -2px;
+        padding-left: 30px !important;
+        font-weight: bold;
+        line-height: 23px;
+        font-size: 14px;
+        color: #222222;
+
+        &:before {
+          background: #E8E8E8;
+          top: 1px;
+        }
+
+        &:after {
+          color: #51BF7D;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .ui.table-koeff {
+    margin-bottom: 0;
+
+    .name-team {
+      text-align: left;
+      width: 430px;
+      padding: 0 10px !important;
+    }
+
+    thead {
+      th {
+        height: 30px;
+        padding: 0;
+        text-align: center;
+        background: #E8E8E8;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          background: #EDEDED !important;
+          border-right: 0;
+        }
+      }
+
+      td {
+        border-right: 1px solid #d4d4d5;
+        text-align: center;
+      }
+
+      .cols {
+        position: relative;
+
+        &:hover {
+          background: #39B54A !important;
+          cursor: pointer;
+        }
+
+        &-2 {
+          width: 50%;
+        }
+
+        &-3 {
+          width: 25%;
+        }
+
+        & .factor {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          $size: 30px;
+          min-height: $size;
+          //line-height: $size / 2;
+        }
+      }
+    }
+  }
+
+  .add-factors {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

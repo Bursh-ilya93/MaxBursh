@@ -1,0 +1,1128 @@
+@mixin th_style {
+  font-family: Roboto;
+  line-height: 23px;
+  height: 29px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  background: #51BF7D;
+  border-top: 1px solid #BDBDBD;
+  border-bottom: 1px solid #129A48;
+}
+
+@mixin commonFilterStyle {
+  margin: 14px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  & .filter {
+    label {
+      white-space: nowrap;
+      position: relative;
+      top: 5px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.wrap-input {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+
+  label {
+    font-size: 16px;
+    display: inline-block;
+
+  }
+
+  .ui.dropdown {
+    margin-left: auto;
+    background: #E8E8E8;
+    width: 268px;
+  }
+
+  input {
+    background: #E8E8E8;
+    width: 268px;
+    height: 36px;
+    border: 0;
+    margin-left: auto;
+    text-indent: 10px;
+    outline: none;
+  }
+}
+
+.message {
+  text-align: center;
+  display: none;
+
+  &.attention {
+    top: 5px;
+    position: absolute;
+    right: -50%;
+  }
+
+  &-error {
+    color: #ff0316;
+  }
+  &-success {
+    color: green;
+  }
+
+  &.none {
+    display: none;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.user-page {
+  width: 100%;
+  font-size: 14px;
+  color: #222222;
+
+  .breadcumbs {
+    position: relative;
+    top: -5px;
+    margin-bottom: 0 !important;
+
+    a {
+      padding-left: 0;
+    }
+  }
+
+  &__main {
+    display: flex;
+    width: 100%;
+
+    &-left {
+      width: 228px;
+    }
+
+    &-right {
+      width: 100%;
+    }
+  }
+
+  .user-info {
+    padding-left: 5px;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: Roboto;
+    color: #000000;
+
+    &__item {
+      margin-bottom: 7px;
+    }
+
+    .title {
+      width: 140px;
+      display: inline-block;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+  }
+
+  .page-title {
+    color: #129A48;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 10px;
+
+    thead {
+      tr {
+        th {
+          @include th_style;
+        }
+      }
+    }
+
+    tbody {
+      font-size: 14px;
+      color: #222222;
+
+      tr {
+        border-bottom: 1px solid #BDBDBD;
+      }
+
+      td {
+        height: 30px;
+        text-align: center;
+        padding: 0 3px;
+      }
+    }
+  }
+
+  .history-operation {
+    width: 65%;
+    margin-left: 15px;
+
+    .commonFilter {
+      @include commonFilterStyle;
+
+      & .filter {
+        margin: 0 30px 0 0;
+        display: flex;
+
+        .input-filter {
+          height: 30px;
+          width: 200px;
+          background-color: #E8E8E8;
+          border: none;
+          outline: none;
+          padding-top: 6px;
+
+          .text {
+            font-size: 13px;
+            line-height: normal;
+            text-indent: 10px;
+            color: #222222;
+          }
+
+          .menu {
+            overflow: overlay;
+          }
+        }
+
+        .bet-filter {
+          .menu {
+            max-height: 100px;
+          }
+        }
+
+        .period-filter {
+          .menu {
+            max-height: 150px;
+          }
+        }
+
+        .sport-filter {
+          .menu {
+            max-height: 200px;
+          }
+        }
+
+        &__title {
+          display: block;
+          width: 100%;
+          border-bottom: 1px solid #0a9f2f;
+          margin-bottom: 20px !important;
+          padding: 5px 0;
+        }
+      }
+    }
+    
+    .body {
+      margin: 10px 0 50px 0;
+      font-family: Roboto;
+      font-size: 14px;
+      color: #222222;
+
+      table {
+        width: 100%;
+
+        td {
+          line-height: 23px;
+          padding: 3px 0;
+        }
+
+        thead {
+          tr {
+
+            th {
+              &.time {
+                width: 8%;
+              }
+
+              &.name-event {
+                width: 63%;
+              }
+
+              &.bet {
+                width: 9%;
+              }
+
+              &.result {
+                width: 9%;
+              }
+
+              &.print {
+                width: 9%;
+              }
+            }
+          }
+        }
+
+        tbody {
+
+          tr {
+
+            &.row-bets {
+              &.mark {
+                display: table-row;
+              }
+            }
+
+            &.first {
+              background: #E8E8E8;
+              border-bottom: 1px solid #BDBDBD;
+
+              td {
+                text-align: left;
+                position: relative;
+                &.description {
+                  padding: 3px 10px;
+                  width: 36%;
+
+
+                  .vip-bet {
+                    font-style: italic;
+                    color: #ff0316;
+                  }
+
+                  .bet-type {
+
+                    &.system {
+                      color: #007aff;
+                      text-decoration: underline;
+                      cursor: pointer;
+                    }
+                  }
+                }
+
+                &.koeff {
+                  font-weight: bold;
+                }
+
+                &.result {
+                  font-weight: bold;
+                  color: #222222;
+                  padding: 3px 5px;
+                  text-align: center;
+                }
+
+                &.print {
+                  padding: 3px 5px;
+                  text-align: center;
+
+                  img {
+                    width: 20px;
+                    margin: 0 auto;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+
+            &.description {
+
+              &.mark {
+                & td {
+                  background: #ffffb3;
+                }
+              }
+
+              td {
+                text-align: left;
+                &.time {
+                  text-align: center;
+                }
+
+                &.event {
+                  padding-left: 10px;
+
+                  .live {
+                    color: red;
+                    font-weight: bold;
+                  }
+                }
+
+                &.koeff {
+                  text-align: center;
+                  font-weight: bold;
+                }
+
+                &.bet {
+                  text-align: center;
+                }
+
+                &.result {
+                  position: relative;
+                  text-align: center;
+                  width: 158px;
+                  padding: 0 0 5px 0;
+                }
+              }
+            }
+
+            .cash-out__icon {
+              position: absolute;
+              top: 0.7px;
+              left: -20px;
+
+              svg {
+                width: 42px;
+                height: 28px;
+              }
+            }
+
+            .cash-out__icon-active {
+              position: absolute;
+              left: 0;
+              top: 9px;
+
+              &-result {
+                position: absolute;
+                z-index: 2;
+                top: 12px;
+                font-style: italic;
+                font-weight: 900;
+                font-size: 13px;
+                color: #06662C;
+                right: -30px
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .payments-operation {
+    width: 65%;
+    margin-left: 15px;
+    margin-bottom: 50px;
+
+    .body {
+      margin: 55px 0 0 0;
+
+      table {
+        width: 100%;
+
+        thead {
+
+          tr {
+
+            th {
+              &.time {
+                width: 17%;
+              }
+              &.action {
+                width: 40%;
+              }
+              &.amount {
+                width: 17%;
+              }
+              &.method {
+                width: 25%;
+              }
+            }
+          }
+        }
+
+        tbody {
+
+          tr {
+            text-align: left;
+
+            &:nth-child(even) {
+              td {
+                background: #FFFFFF;
+              }
+            }
+
+            td {
+              .cl-gray {
+                margin-left: 5px;
+
+                ._2 {
+                  color: #129A48;
+                }
+
+                ._4 {
+                  color: #ED1C24;
+                }
+              }
+
+              &.time {}
+
+              &.action {
+
+                & .info-link {
+                  color         : #129A48;
+                  cursor        : pointer;
+                  border-bottom : 1px solid #129A48;
+                  margin-left   : 5px;
+
+                  &:hover {
+                    border-bottom : 0;
+                  }
+                }
+
+                & .error {
+                  color       : #dd0000;
+                  margin-left : 5px;
+                }
+              }
+
+              &.amount {}
+
+              &.method {
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .history-session {
+    width: 62%;
+    margin-left: 15px;
+
+    .content {
+      margin: 0;
+    }
+
+    .commonFilter {
+      @include commonFilterStyle;
+
+      .filter {
+        margin-right: 30px;
+
+        label {
+          position: relative;
+          top: -1px;
+        }
+      }
+
+      input {
+        height: 30px;
+        width: 200px;
+        background-color: #E8E8E8;
+        border: none;
+        outline: none;
+        text-indent: 10px;
+      }
+    }
+
+    table {
+      width: 100%;
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              background: #FFFFFF;
+            }
+          }
+        }
+
+        td {
+          &.time, &.ip {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .change-password {
+    margin-left: 15px;
+    width: 628px;
+
+    &__messages {
+      color: #ED1C24;
+      padding-left: 10px;
+    }
+
+    &__input {
+      margin-bottom: 30px;
+      position: relative;
+
+      .error {
+        position: absolute;
+        color: #ED1C24;
+        top: 5px;
+        white-space: nowrap;
+        right: -250px;
+      }
+
+      div, label {
+        display: inline-block;
+      }
+
+      label {
+        position: relative;
+        top: 3px;
+      }
+
+      div {
+        float: right;
+        clear: both;
+
+        input {
+          width: 268px;
+          height: 35px;
+          border: none;
+          background: #E8E8E8;
+          padding: 0;
+          text-indent: 10px;
+          outline: none;
+        }
+      }
+
+      button {
+        float: right;
+        height: 35px;
+        line-height: normal;
+        font-size: 16px;
+        width: 160px;
+        margin-right: 107px;
+      }
+    }
+    form {
+      margin-top: 20px;
+    }
+  }
+
+  .user-settings {
+    width: 610px;
+    margin-left: 15px;
+
+    .settings {
+      margin-top : 53px;
+    }
+
+    .ui.checkbox {
+      label {
+        width: 360px;
+        height: 36px;
+        white-space: nowrap;
+        margin-left: 0;
+        padding-left: 0;
+        text-align: left;
+        display: inline-block;
+        position: relative;
+        top: 7px;
+        text-indent: 10px;
+        color: #222222;
+
+        &:before {
+          right: 0;
+          left: auto;
+        }
+
+        &:after {
+          right: 8px;
+          left: auto;
+          transform: rotate(-26deg);
+        }
+      }
+
+      input[type=checkbox] {
+        right: 0;
+
+        &:checked + label::after {
+          top: 1px;
+        }
+      }
+    }
+
+    .checkbox {
+      right: 0;
+    }
+
+    .filter-container {
+      label {
+        margin-left: 10px;
+        position: relative;
+        top: 8px;
+      }
+
+      .ui.dropdown {
+        height: 36px;
+        background: #E8E8E8;
+        float: right;
+        width: 268px;
+
+        .menu {
+          height: auto;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .cashback {
+    margin-left: 10px;
+
+    .body {
+      margin-bottom: 10px;
+    }
+
+    .accountInfo {
+      margin-top: 18px;
+      background: #FFFFFF;
+      border: 2px dashed #B5DFC5;
+      box-sizing: border-box;
+      width: 233px;
+      height: 56px;
+      padding: 12px 15px;
+      text-align: justify;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .info {
+        font-weight: 900;
+        font-size: 24px;
+        color: #129A48;
+      }
+
+      .dateTime {
+        margin-left: auto;
+        position: relative;
+        top: 1px;
+        font-size: 13px;
+        color: #222222;
+      }
+    }
+
+    .button {
+      margin: 15px 0 10px 0;
+    }
+
+    .ui.loader {
+      margin: 10px 200px;
+    }
+
+    .green {
+      margin-top: 10px;
+      display: inline-block;
+      color: #129A48;
+    }
+
+    .red {
+      margin-top: 10px;
+      display: inline-block;
+      color: red;
+    }
+
+    table {
+      width: 440px;
+
+      thead {
+        tr {
+          th {
+            &.time, &.amount {
+              width: 50%;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              background: #FFFFFF;
+            }
+          }
+        }
+
+        td {
+          &.time, &.amount {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .history-bonus {
+    margin-left: 10px;
+    width: 65%;
+
+    table {
+      margin-top: 54px;
+
+      thead {}
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              background: #FFFFFF;
+            }
+          }
+        }
+
+        tr {
+          td {
+            &.time {
+              width: 26%;
+            }
+
+            &.action {
+              width: 52%;
+            }
+
+            &.amount {
+              width: 21%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pay-operation {
+    margin-left: 10px;
+    font-size: 16px;
+
+    .body {
+      margin-top: 50px;
+
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      .images {
+        display: flex;
+        position: relative;
+        top: -13px;
+
+        & > div {
+          margin-right: 15px;
+        }
+      }
+
+      .input {
+        background: #E8E8E8;
+        height: 36px;
+      }
+
+      &__row {
+        display: flex;
+        //margin-bottom: 22px;
+      }
+
+      &__col-1 {
+        width: 343px;
+        display: block;
+        margin-right: 20px;
+      }
+
+      &__col-2 {
+        width: 268px;
+      }
+
+      form {
+        padding-left: 10px;
+      }
+
+      .link {
+        position: relative;
+        top: 10px;
+        font-size: 16px;
+        text-decoration-line: underline;
+        color: #129A48;
+      }
+
+      .button {
+        outline: none;
+        width: 160px;
+        height: 36px;
+      }
+
+      .ui.checkbox {
+        margin: 15px 0;
+
+        label {
+          font-size: 16px;
+          width: 330px;
+          height: 36px;
+          margin-left: 0;
+          padding-left: 0;
+          text-align: left;
+          display: inline-block;
+          position: relative;
+          top: 7px;
+          color: #222222;
+
+          &:before {
+            right: -50px;
+            left: auto;
+          }
+
+          &:after {
+            top: -3px;
+            right: -50px;
+            left: auto;
+            transform: rotate(-26deg);
+          }
+        }
+
+        input[type=checkbox] {
+          right: 0;
+
+          &:checked + label::after {
+            top: -3px;
+          }
+        }
+      }
+
+      .checkbox {
+        right: 0;
+      }
+
+      .warning {
+        margin-top: 20px;
+        margin-left: 10px;
+        color: red;
+        font-style: normal;
+      }
+    }
+  }
+
+  .personal-data {
+    margin-left: 10px;
+
+    .body {
+      margin-top: 18px;
+      width: 570px;
+      margin-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    .wrap-input {
+      margin-bottom: 10px;
+
+      label {
+        position: relative;
+        top: 4px;
+        font-size: 16px;
+        width: 225px;
+        display: inline-block;
+      }
+
+      input {
+        text-indent: 10px;
+        font-size: 16px;
+        color: #222222;
+        width: 320px;
+        border-bottom: 2px solid #51BF7D;
+      }
+
+      img {
+        width : 40px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      &.load-photo {
+        margin-top: 30px;
+      }
+    }
+
+    .attention-data {
+      margin-top: 30px;
+      margin-bottom: 138px;
+    }
+
+    .upload-file {
+      margin-top: 30px;
+    }
+  }
+
+  .take-money-operation {
+    margin-left: 10px;
+    width: 672px;
+
+    .page-title {
+      margin-bottom: 55px;
+    }
+
+    .take-money {
+      .input-filter .menu {
+        height: auto;
+      }
+
+      &-operation__card {
+        .attention-data:before {
+          top: 75px;
+        }
+      }
+
+      &-operation__banks {
+        .attention-data:before {
+          top: 4px;
+        }
+      }
+
+      &-operation__cash {
+        .attention-data:before {
+          top: 2px;
+        }
+      }
+
+      &-cash {}
+
+      &__title {
+        height: 49px;
+        background: #E8E8E8;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 6px;
+        margin-bottom: 29px;
+
+        &-text {
+          position: relative;
+          top: 15px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: normal;
+          text-indent: 10px;
+          color: #222222;
+        }
+
+        &-imgs {
+          text-align: right;
+
+          img {
+            margin-right: 10px;
+            position: relative;
+            top: 8px;
+          }
+
+          .visa {
+            top: 0;
+          }
+
+          .bank {
+            top: -1px;
+          }
+
+          .mts {
+            top: 12px;
+          }
+
+          .velcom {
+            top: 12px;
+          }
+
+          .life {
+            top: 12px;
+          }
+        }
+      }
+
+      .attention-data {
+        color: #ED1C24;
+        border-color: #ED1C24;
+      }
+
+      &__body {
+        width: 628px;
+      }
+
+      .button {
+        white-space: nowrap;
+        width: 200px;
+        height: 36px;
+        outline: none;
+        margin-right: 67px;
+
+        &.disable {
+          background: #E8E8E8;
+          color: #222222;
+        }
+      }
+    }
+
+    &__banks {
+      .banks-toolbar {
+        width: 440px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          width: 52px;
+          height: 52px;
+          background: #E8E8E8;
+          box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+
+          &.active {
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+            border: 1px solid #129A48;
+          }
+
+          &:hover {
+            transition: 200ms;
+            transform: scale(1.05);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .user-forgot {
+    width: 770px;
+
+    .page-title {
+      margin-bottom: 60px;
+    }
+
+    .wrap-input {
+      flex-direction: row-reverse;
+
+      input {
+        width: 360px;
+      }
+
+      label {
+        width: 360px;
+        font-size: 16px;
+        color: #616161;
+      }
+
+      .error {
+        padding-top: 5px;
+        color: #ED1C24;
+      }
+
+      .error-request {
+        color: #129A48;
+        position: absolute;
+        top: 260%;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

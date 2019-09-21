@@ -1,0 +1,27 @@
+@mixin turn {
+  display: inline-block;
+  $size: 6px;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: #0a9f2f;
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+
+.turn {
+  @include turn;
+
+  &.score {
+    margin: 0 2px;
+  }
+
+  &.sport-3 {
+    background: #ffe63f;
+  }
+
+  &.sport-7 {
+    background: #ff9347;
+  }
+}

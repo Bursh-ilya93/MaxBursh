@@ -1,0 +1,242 @@
+.news-page {
+  &__content {
+    display: flex;
+  }
+
+  &__main {
+    min-width: 1050px;
+    max-width: 1050px;
+  }
+
+  .news__list {
+    .button {
+      margin: 15px 0 20px 0;
+      outline: none ;
+    }
+
+    &__items {
+      & > div:nth-child(1) {
+        width: 690px;
+        height: 430px;
+
+        img {
+          width: 690px;
+          height: 430px;
+        }
+      }
+      &__item {
+        float: left;
+        position: relative;
+        width: 340px;
+        height: 210px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &-image {
+          img {
+            width: 340px;
+            height: 210px;
+          }
+        }
+
+        &-text {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 72px;
+          max-height: 72px;
+          border-top: 2px solid #129A48;
+          background: rgba(247, 247, 247, 0.9);
+          display: flex;
+
+          .date {
+            background: #129A48;
+            width: 58px;
+            color: #FFFFFF;
+            font-weight: 900;
+            font-size: 30px;
+            text-align: center;
+            padding: 12px;
+
+            p {
+              margin-bottom: 0;
+            }
+
+            &__day {
+              font-size: 22px;
+            }
+
+            &__month {
+              font-size: 11px;
+              text-transform: uppercase;
+            }
+          }
+
+          .title {
+            height: 100%;
+            margin-right: auto;
+            width: 250px;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 10px 0 12px 13px;
+
+            a {
+              color: #000000;
+              /* autoprefixer: off */
+              -webkit-box-orient: vertical;
+              /* autoprefixer: on */
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+
+        &:hover {
+          position: relative;
+          z-index: 2;
+          box-shadow: 0px 10px 20px rgba(34, 34, 34, 0.41);
+          transform: scale(1.01);
+          transition: 700ms;
+        }
+      }
+    }
+  }
+
+  .news {
+    position: relative;
+    width: 1040px !important;
+
+    &-data {
+      & > p {
+        width: 80%;
+
+        &:first-child {
+          margin-bottom: 10px;
+          //width: 1040px !important;
+          //height: 430px !important;
+          //overflow: hidden;
+        }
+      }
+
+      img {
+        //width: 100% !important;
+        //height: auto !important;
+        margin: 0 !important;
+      }
+    }
+
+    &-header {
+      position: absolute;
+      width: 1040px;
+      height: 92px;
+      top: 450px;
+      display: flex;
+
+      &__data {
+        font-weight: 900;
+        color: #FFFFFF;
+        width: 76px;
+        height: 92px;
+        background: #129A48;
+        top: -33px;
+        position: absolute;
+        right: 58px;
+        padding: 13px;
+        text-align: center;
+
+        p {
+          margin: 0;
+        }
+
+        .day {
+          font-size: 30px;
+        }
+
+        .month {
+          font-size: 14px;
+          text-transform: uppercase;
+        }
+      }
+
+      &__title {
+        width: 100%;
+        font-weight: 500;
+        font-size: 24px;
+        color: #000000;
+      }
+    }
+
+    &-navigate {
+      padding-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      &__button {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: normal;
+        text-align: center;
+        text-decoration-line: underline;
+        display: block;
+        width: 200px;
+        height: 30px;
+
+        &.prev {
+          position: relative;
+          color: #129A48;
+
+          &:before {
+            content: url("../images/arrow-right.png");
+            transform: rotate(180deg);
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 9px;
+            height: 9px;
+            background-size: 9px;
+          }
+        }
+
+        &.next {
+          position: relative;
+          color: #129A48;
+
+          &:after {
+            content: url("../images/arrow-right.png");
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            width: 9px;
+            height: 9px;
+            background-size: 9px;
+          }
+        }
+
+        &.disabled {
+          cursor: default;
+          color: #BDBDBD;
+
+          &.prev {
+            &:before {
+              top: 1px;
+              transform: rotate(0deg);
+              content: url("../images/arrow-left.png");
+            }
+          }
+
+          &.next {
+            &:after {
+              content: url("../images/arrow-left.png");
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

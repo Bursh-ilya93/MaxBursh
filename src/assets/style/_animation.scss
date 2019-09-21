@@ -1,0 +1,21 @@
+@keyframes increaseToWidth {
+  0% {
+    opacity: 0;
+    width: 100px;
+  }
+  100% {
+    opacity: 1;
+    width: 300px;
+  }
+}
+
+@keyframes decreaseToWidth {
+  0% {
+    opacity: 1;
+    width: 300px;
+  }
+  100% {
+    opacity: 0;
+    width: 100px;
+  }
+}

@@ -1,0 +1,203 @@
+.gadget-tvgame {
+  background-color: red;
+
+  .figure {
+    width: 100%;
+    margin: 0 0 5px 0;
+
+    & > p:first-child{
+      position: relative;
+      margin-bottom: 0;
+      height: 132px;
+
+      .logo {
+        position: absolute;
+        bottom: 13px;
+        left: 18px;
+      }
+    }
+
+    figcaption {
+        &:hover {
+            cursor: pointer;
+        }
+
+        width: 306px;
+        height: 50px;
+        background: #E8E8E8;
+
+        .rcs_sliderBox {
+          height: 50px !important;
+          margin: 0;
+          width: 100% !important;
+          position: relative;
+        }
+
+        .rcs_buttonSet {
+          position: static !important;
+        }
+
+        .rcs_previous {
+          display: none;
+        }
+
+      .rcs_next {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 59px !important;
+        height: 50px !important;
+        margin: 0 !important;
+        color: #222222 !important;
+        background: linear-gradient(270deg, #E8E8E8 0%, rgba(232, 232, 232, 0) 100%) !important;
+
+        &:before {
+          background:url("../images/arrow.svg");
+          content: "" !important;
+          background-size: 14px;
+          width: 14px;
+          height: 14px;
+          position: absolute;
+          right: 10px;
+          top: 45%;
+        }
+      }
+
+      .rcs_dotsSet {
+        display: none;
+      }
+
+      .rcs_sliderBox {
+        overflow-y: hidden;
+      }
+
+      .itemWrapper {
+        background: none !important;
+        margin: 0 10px  !important;
+        padding: 0;
+        display: flex;
+
+        img {
+          position: relative !important;
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+        }
+
+        div {
+          height: auto;
+        }
+
+        p {
+          text-align: left;
+          width: auto;
+          padding: 0;
+          color: black !important;
+          position: relative;
+          transform: none !important;
+          background: none;
+        }
+
+        img {
+          float: left;
+          margin-right: 10px;
+          top: 2px;
+        }
+
+        .text {
+          margin-left: 30px;
+          font-style: normal;
+          font-weight: bold;
+          line-height: normal;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #222222;
+        }
+
+        .live {
+          position: relative;
+          font-weight: 300;
+          line-height: normal;
+          font-size: 14px;
+          color: #ED1C24;
+          width: 80px;
+          top: 1px;
+          left: 13px;
+
+          &:after {
+            top: 1px;
+            right: 40px;
+            content: '';
+            background: url("../images/clock.svg") no-repeat;
+            width: 16px;
+            height: 16px;
+            background-size: 15px;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    .game {
+      display: inline-block;
+      white-space: nowrap;
+      box-sizing: content-box;
+
+      &.vilbet {
+        .live {
+          left: 20px;
+
+          &:after {
+            left: 15px;
+          }
+        }
+      }
+
+      &.pokerbet {
+        .live {
+          left: 20px;
+
+          &:after {
+            left: 4px;
+          }
+        }
+      }
+
+      &.bitva-stavok {
+        .live {
+          &:after {
+            left: -10px;
+          }
+        }
+      }
+
+      &.poker {
+        .live {
+          left: 20px;
+
+          &:after {
+            left: 20px;
+          }
+        }
+      }
+
+      &.run-dogs {
+        .live {
+          &:after {
+            left: -10px;
+          }
+        }
+      }
+
+      &.horses {
+        .live {
+          left: 20px;
+
+          &:after {
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

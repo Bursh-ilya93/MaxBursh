@@ -1,0 +1,215 @@
+.partner-page {
+  .breadcumbs {
+    margin-left: 15px;
+  }
+
+  .page__menu {
+    &-item {
+      height: 84px;
+      position: relative;
+
+      span {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -6px;
+        font-weight: bold;
+        font-size: 13px;
+        left: 85px;
+        color: #222222;
+        width: 144px;
+        height: 100%;
+        text-indent: 0;
+      }
+
+      &:before {
+        width: 55px;
+        height: 65px;
+        content: '';
+        position: absolute;
+        top: 11px;
+        left: 20px;
+      }
+
+      &.active {
+        span {
+          color: #fff;
+          position: relative;
+          z-index: 2;
+        }
+
+        &:after {
+          //z-index: -1;
+          width: 80px;
+          height: 83px;
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        &.bfk {
+          background: linear-gradient(102.98deg, #51BF7D 0%, #129A48 100%);
+
+          &:after {
+            background: url("../images/partners/menu-bg-bfk.png") no-repeat;
+          }
+        }
+
+        &.fk-vitebsk {
+          background: linear-gradient(102.32deg, #034EA2 0%, #002752 94.02%);
+          &:after {
+            background: url("../images/partners/menu-bg-vitebsk.png") no-repeat;
+
+          }
+        }
+
+        &.fk-slavia {
+          background: linear-gradient(102.62deg, #C41515 3.89%, #8B0505 98.25%);
+          &:after {
+            background: url("../images/partners/menu-bg-slavia.png") no-repeat;
+          }
+        }
+      }
+
+      &.bfk {
+        &:before {
+          background: url("../images/partners/menu-logo-bfk.svg") no-repeat;
+        }
+      }
+
+      &.fk-vitebsk {
+        &:before {
+          background: url("../images/partners/fk_vitebsk.svg") no-repeat;
+          background-size: 46px 56px;
+        }
+      }
+
+      &.fk-slavia {
+        &:before {
+          background: url("../images/partners/fk-slavia-logo.svg") no-repeat;
+          background-size: 42px 56px;
+        }
+      }
+    }
+  }
+}
+
+.partner {
+  font-family: Roboto, sans-serif;
+  width: 1040px;
+  margin-left: 15px;
+  margin-top: 10px;
+
+  &__image {
+    position: relative;
+
+    .bg {
+      width: 100%
+    }
+  }
+
+  &__text {
+    position: relative;
+    font-size: 16px;
+    color: #000000;
+    top: -143px;
+    left: -1px;
+    width: calc(100% + 2px);
+    z-index: 2;
+    padding: 60px 20px 0 20px;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    background: linear-gradient(180deg, #DFDFDF 38.71%, rgba(223, 223, 223, 0) 85.46%);
+
+    &-head {
+      margin-top: 20px;
+      text-align: right;
+
+      p {
+        margin: 0;
+      }
+      margin-bottom: 50px;
+    }
+
+    &-main {
+      margin-bottom: 40px;
+    }
+
+    &-link {
+      a {
+        text-decoration-line: underline;
+        color: #129A48;
+      }
+    }
+  }
+
+
+  &.bfk {
+    .logo {
+      position: absolute;
+      top: 200px;
+      left: 71px;
+      svg {
+        width: 1038px;
+        height: 564px;
+      }
+    }
+
+    .text {
+      &:before {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: url("../images/partners/partner-bfk-bg.png");
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  &.fk-slavia {
+    .logo {
+      position: absolute;
+      top: 310px;
+      left: 48px;
+
+      svg {
+        width: 158px;
+        height: 194px;
+      }
+    }
+
+    .text {
+      padding-top: 20px;
+
+      &-head {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &.fk-vitebsk {
+    .logo {
+      position: absolute;
+      top: 310px;
+      left: 48px;
+
+      svg {
+        width: 158px;
+        height: 194px;
+      }
+    }
+
+    .text {
+      padding-top: 20px;
+
+      &-head {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

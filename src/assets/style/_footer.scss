@@ -1,0 +1,153 @@
+.footer {
+  background: #E7E7E7;
+
+  .navigation {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 14px;
+    color: #484848;
+    padding-top: 31px;
+    border-bottom: 1px solid #BDBDBD;
+    border-top: 1px solid #BDBDBD;
+
+    & > div {
+      width: 748px !important;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto !important;
+      justify-content: space-between;
+
+      div {
+        width: 236px;
+        padding-left: 16px;
+      }
+    }
+
+    h3 {
+      color: #000000;
+      font-weight: bold;
+      margin-bottom: 5px;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    a {
+      color: #484848;
+    }
+
+    div {
+      margin-bottom: 24px;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-size: 16px 16px;
+        left: -10px;
+        top: 0;
+      }
+
+      &.help:before {
+        background: url("../images/footer/help.svg") no-repeat;
+      }
+
+      &.links:before {
+        background: url("../images/footer/link.svg") no-repeat;
+      }
+
+      &.site:before {
+        background: url("../images/footer/home.svg") no-repeat;
+      }
+
+      &.address:before {
+        background: url("../images/footer/earth.svg") no-repeat;
+      }
+
+      &.pays:before {
+        background: url("../images/footer/pays.svg") no-repeat;
+      }
+
+      &.games:before {
+        background: url("../images/footer/games.svg") no-repeat;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        color: #484848;
+      }
+    }
+  }
+
+  .content {
+    padding: 30px;
+
+    & > div {
+      padding-right: 30px;
+      width: 780px !important;
+      display: flex;
+      margin: auto;
+
+      &:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .logo {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .name {
+          font-weight: bold;
+          line-height: normal;
+          font-size: 14px;
+          text-align: center;
+          color: #616161;
+
+          span {
+            margin-right: 10px;
+          }
+        }
+
+        .social {
+          & > a {
+            display: inline-block;
+
+            &:first-child {
+              margin-right: 20px;
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        left: 20px;
+        width: 444px !important;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        height: 54px;
+        align-items: center;
+
+        & > div {
+          display: inline-block;
+          width: 48px;
+        }
+      }
+    }
+  }
+}

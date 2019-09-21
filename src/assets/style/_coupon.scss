@@ -1,0 +1,230 @@
+.coupon {
+  $padding-block: 5px 15px;
+  background-color: #fff;
+  transform: none !important;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+
+  &__header {
+    background: $accent-color;
+    padding: $padding-block;
+
+    &-title {
+      color: #fff;
+    }
+  }
+
+  &__number {
+
+  }
+
+  &__content {
+    border: 1px solid $accent-color;
+    box-sizing: border-box;
+
+    &-tabs {
+      display: flex;
+
+      &-tab {
+        padding: 5px;
+        text-align: center;
+        width: 33.333333%;
+        cursor: pointer;
+        user-select: none;
+        border-bottom: 3px solid $border-color;
+
+        &.active {
+          background: $sub-accent-color;
+          color: $white-color;
+          border-bottom: 3px solid $accent-color;
+        }
+      }
+    }
+
+    &-messages {
+      padding: $padding-block;
+      font-weight: bold;
+
+      &.success {
+        color: $accent-color;
+        background: rgba(18, 154, 72, 0.2);
+      }
+
+      &.error {
+        color: $red-color;
+        background: #ffd8de;
+      }
+
+    }
+
+    &__bets {
+      max-height: 60vh;
+      overflow: auto;
+      border-bottom: 1px solid $accent-color;
+
+      &__bet {
+        padding: $padding-block;
+        background: #fff;
+
+        &:nth-child(odd) {
+          background: $odd-row-background;
+        }
+
+        & .bet-players {
+          font-weight: bold;
+
+          & .bet-delete {
+            position: absolute;
+            right: 10px;
+            color: $red-color;
+            cursor: pointer;
+
+            &:hover {
+              color: $black-color;
+            }
+          }
+        }
+
+        & .bet-desc {
+          display: flex;
+          justify-content: space-between;
+
+          & .bet-type {
+
+          }
+
+          & .bet-koeff {
+            font-weight: bold;
+
+            @mixin upDownArrow($content, $color) {
+              &:before {
+                position: relative;
+                content: $content;
+                width: 10px;
+                height: 10px;
+                color: $color;
+                top: 1px;
+                margin-right: 2px;
+              }
+            }
+
+            &.koeff-up {
+              @include upDownArrow('↑', $accent-color);
+            }
+
+            &.koeff-down {
+              @include upDownArrow('↓', $red-color);
+            }
+
+            &.koeff-deleted {
+              color: $red-color;
+              text-decoration: line-through;
+            }
+          }
+        }
+
+        & .bet-amount {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          & .text-sum {
+            font-weight: bold;
+          }
+
+          & input[type='text'] {
+            border: 1px solid $accent-color;
+            width: 100px;
+            outline: none;
+            text-align: right;
+            padding: 3px 5px;
+            color: $black-color;
+          }
+        }
+      }
+
+      &-message {
+        display: block;
+        text-align: center;
+        padding: 5px;
+      }
+    }
+
+    &__total {
+      display: flex;
+      flex-direction: column;
+      background: $sub-accent-color;
+      color: $white-color;
+      padding: 10px 0;
+
+      &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+
+        & .max-bet {
+          cursor: pointer;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+
+        & input[type='text'] {
+          border: 1px solid $accent-color;
+          width: 100px;
+          outline: none;
+          text-align: right;
+          padding: 3px 5px;
+          color: $black-color;
+        }
+      }
+    }
+
+    &-save_select {
+      padding: 5px;
+
+      & .checkbox {
+        display: flex;
+
+        & input[type='checkbox'] {
+          position: relative;
+          top: 3px;
+        }
+
+        & label {
+          margin-left: 10px;
+          user-select: none;
+        }
+      }
+    }
+
+    &-accept_changes {
+      display: flex;
+      user-select: none;
+      padding: 3px;
+      background: #f6f6f6;
+      cursor: pointer;
+
+      & span {
+        color: $accent-color;
+        font-weight: bold;
+      }
+
+      &-data {
+        padding: 5px;
+
+        & input[type='radio'] {
+          margin-left: 1px;
+        }
+
+        & label {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.button {
+  font-family: Roboto;
+  width: 121px;
+  height: 26.09px;
+  background: #129A48;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+  border: 0;
+  font-weight: 500;
+  line-height: 22px;
+  font-size: 13px;
+  text-align: center;
+  color: #FFFFFF;
+  outline: none;
+  cursor: pointer;
+
+  &[disabled] {
+    background: $disabled-background;
+    color: $disabled-color;
+  }
+
+  &:hover {
+
+  }
+
+  &.clear {
+    background: none;
+    box-shadow: none;
+    color: $white-color;
+  }
+}

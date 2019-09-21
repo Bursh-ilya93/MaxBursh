@@ -1,0 +1,38 @@
+.header-component {
+  font-family: Roboto, 'sans-serif' !important;
+  font-weight: bold !important;
+  font-size: 14px;
+  color: white !important;
+  background: #129A48;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+  line-height: 27px;
+  padding: 0 10px !important;
+  margin: 0 !important;
+
+  & > span {
+    display: inline-block;
+
+    &:nth-child(1) {
+      font-style: normal;
+      font-size: 14px !important;
+    }
+
+    a {
+      color: white !important;
+    }
+
+    &:nth-child(2) {
+      font-style: normal;
+      font-size: 14px;
+      text-align: right;
+      text-decoration-line: underline;
+      color: #FFFFFF;
+      float: right;
+      font-weight: 400 !important;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

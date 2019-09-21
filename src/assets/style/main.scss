@@ -1,0 +1,186 @@
+@import "variables";
+@import "grid";
+@import "air-loader";
+@import "mxl-slider";
+@import "notify";
+@import "radio";
+@import "checkbox";
+@import "factor";
+@import "coupon";
+@import "head";
+@import "input";
+@import "button";
+@import "tvgame";
+@import "livescroll";
+@import "turn";
+@import "mainpage";
+@import "live";
+@import "line";
+@import "header_component";
+@import "live-event";
+@import "populars";
+@import "table_add_koeff";
+@import "table";
+@import "footer";
+@import "input";
+@import "animation";
+@import "search_input";
+@import "toggle";
+@import "tools";
+@import "register";
+@import "filter-line";
+@import "leftsidebar";
+@import "rightsidebar";
+@import "accordion";
+@import "breadcumbs";
+@import "live-by-id";
+@import "weather";
+@import "results-line";
+@import "datepicker";
+@import "result-live";
+@import "about";
+@import "pps";
+@import "modal-comment";
+@import "user";
+@import "colors";
+@import "upload-file";
+@import "news";
+@import "payments-page";
+@import "bonus";
+@import "partner";
+
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: $base-font-size;
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #E2E2E2;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    position: relative;
+    left: -1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $sub-accent-color;
+  }
+
+  p {
+    line-height: 1;
+  }
+}
+
+.ui.sidebar {
+  will-change: unset !important;
+  transform: unset !important;
+}
+
+#root {
+  min-width: 1300px;
+  font-family: Roboto, 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.link {
+  font-size: 12px;
+  text-decoration-line: underline;
+  color: $accent-color;
+}
+
+.main {
+  margin-bottom: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+
+  .full-header {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 13px !important;
+    color: #000000;
+    background: none;
+    margin: 0;
+    box-shadow: none;
+    position: relative;
+    left: 10px;
+
+    a {
+      color: #000000;
+    }
+
+    &:first-child {
+      margin-top: 3px;
+    }
+
+    & span:nth-child(2) {
+      margin: 0 5px;
+    }
+
+    & + div {
+      margin: 0;
+    }
+  }
+}
+
+.ui.loader {
+  display: block;
+  position: relative;
+  margin: 10px auto;
+  transform: none;
+  left: 0;
+
+  &-site {
+    position: absolute;
+    top: 20%;
+    bottom: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.full-page {
+  width: 100%;
+  padding: 26px 20px;
+
+  .breadcumbs {
+    margin-bottom: 10px;
+  }
+}
+
+.page__menu {
+  margin-top: 35px;
+  margin-right: 10px;
+  width: 228px;
+  background: #E8E8E8;
+  display: table;
+
+  &-item {
+    display: block;
+    border-bottom: 1px solid $sub-accent-color;
+    font-size: 13px;
+    color: #222222;
+    text-indent: 10px;
+    height: 30px;
+    padding-top: 6px;
+
+    &.active, &:hover {
+      background: $sub-accent-color;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.tools {
+  &-timer {
+    display    : flex;
+    font-weight: 500;
+    font-size  : 13px;
+    color      : #112222;
+
+    span {
+      position: relative;
+      top: 4px;
+      white-space: nowrap;
+    }
+
+    & > div {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #129A48;
+
+      g, path {
+        fill: #129A48;
+      }
+    }
+  }
+
+  &-language {
+    font-family : Roboto, 'sans-serif';
+    white-space : nowrap;
+    margin-right: 50px;
+    font-size   : 13px;
+    position    : relative;
+
+    .label {
+      color     : #129A48;
+    }
+
+    .dropdown {
+      color     : #222222;
+      width     : 80px;
+    }
+
+    .icon {
+      top      : 2px;
+      right    : -17px;
+      position : absolute;
+      transform: rotate(90deg);
+      cursor   : pointer;
+    }
+
+    i.icon {
+      opacity : 0;
+      right   : -15px;
+      position: absolute;
+      z-index : 2;
+      top     : 0;
+    }
+
+    .menu {
+      width   : 150px !important;
+      right   : -30px !important;
+      top     : 21px !important;
+      border-radius: 0 !important;
+      left    : auto !important;
+
+      .item {
+        height: 30px !important;
+        color: #222222 !important;
+      }
+    }
+  }
+}

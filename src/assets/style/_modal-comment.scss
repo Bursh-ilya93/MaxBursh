@@ -1,0 +1,73 @@
+.modal-comment {
+  top: 500px;
+  width: 600px;
+  background: #F7F7F7;
+  padding: 20px 50px 52px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  height: 500px;
+
+  &__main {
+    .title {
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+      color: #000000;
+    }
+
+    .comment-input {
+      display: block;
+      width: 100%;
+      height: 36px;
+      background: #F7F7F7;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: normal;
+      text-indent: 10px;
+      color: #222222;
+      margin-bottom: 30px;
+      border: 0;
+      border-bottom: 2px solid #51BF7D;
+      outline: none;
+    }
+
+    textarea.comment-input {
+      resize: none;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+
+    .comment-button {
+      position: relative;
+      top: 10px;
+      width: 160px;
+      height: 36px;
+      background: #129A48;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+      font-weight: 500;
+      font-size: 16px;
+      outline: none;
+      text-align: center;
+      color: #FFFFFF;
+      border: none;
+      float: right;
+    }
+
+    .captcha {
+      display: inline-block;
+    }
+
+    .stars {
+      width: 100%;
+    }
+
+    .dv-star-rating {
+      display: block;
+      height: 20px;
+      margin-bottom: 20px;
+
+      i {
+        font-size: 23px;
+      }
+    }
+  }
+}

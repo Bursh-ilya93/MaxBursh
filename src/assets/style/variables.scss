@@ -1,0 +1,20 @@
+$base-font-size: 12px;
+$team-font-size: 14px;
+$accent-color: #129A48;
+$sub-accent-color: #51BF7D;
+$red-color: #FF6363;
+$border-color: #d4d4d5;
+$table-header-background: #e8e8e8;
+$odd-row-background: #e7e7e7;
+$white-color: #fff;
+$black-color: #000;
+
+$disabled-background: #ccc;
+$disabled-color: #a6a6a6;
+
+$red-line-color : #ED1C24;
+
+@mixin maxHeightWithOverflow {
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+}

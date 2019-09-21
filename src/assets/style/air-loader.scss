@@ -1,0 +1,26 @@
+.air-loader {
+  $air-size: 30px;
+  width: $air-size;
+  height: $air-size;
+  position: relative;
+
+  & > .ui.loader {
+    $size: 15px;
+    position: absolute;
+    width: $size !important;
+    height: $size !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    margin: 0;
+
+    &:before, &:after {
+      width: $size;
+      height: $size;
+      margin: 0;
+      left: 0;
+      top: 0;
+    }
+
+  }
+}

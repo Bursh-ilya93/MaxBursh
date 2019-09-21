@@ -1,0 +1,139 @@
+.ui.sidebar-right.sidebar {
+  width: 300px;
+  position: relative;
+  background: #F7F7F7;
+  //overflow: hidden;
+  margin-bottom: 58px;
+  margin-right: 5px !important;
+  //overflow: hidden !important;
+  //max-height: calc(100vh - 100px);
+  //overflow-y: auto !important;
+
+  .sidebar-right__filters {
+    height: 28px;
+    padding-top: 6px;
+    padding-right: 17px;
+
+    .checkbox {
+      float: right;
+
+      label {
+        padding-top: 2px;
+        &:before {
+          top: -1px;
+        }
+        &:after {
+          top: -1px;
+        }
+      }
+    }
+  }
+
+  &.visible {
+    box-shadow: none !important;
+  }
+
+  .banner {
+    width: 100%;
+    overflow: hidden;
+    height: 80px;
+    background-size: 306px 80px;
+    margin-bottom: 8px;
+
+    &.pay {
+      background-image: url("../images/banners/pay-bg.png");
+    }
+
+    &.cancel {
+      background-image: url("../images/banners/cancel-bg.png");
+    }
+
+    &.fast-pay {
+      background-image: url("../images/banners/fast-pay-bg.png");
+    }
+
+    .logo {
+      position: relative;
+      top: 14px;
+      left: 24px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .gadget {
+    background: #F7F7F7 !important;
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;
+
+    &__element {
+      background: #E8E8E8 !important;
+      padding: 0;
+      margin: 0 0 5px 0 !important;
+
+      p {
+        margin: 0 !important;
+        height: 140px;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(87deg, #353434 0%, rgba(34, 34, 34, 0) 100%);
+          background: -webkit-linear-gradient(87deg, #353434 0%, rgba(34, 34, 34, 0) 100%);
+          position: absolute;
+        }
+      }
+
+      img {
+        width: 306px;
+        height: auto;
+      }
+
+      figcaption {
+        min-height: 49px;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 14px;
+        color: #222222;
+        padding: 11px 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-partners {
+      .header-component {
+        height: 30px !important;
+      }
+
+      & > div {
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        height: 130px;
+        align-items: center;
+      }
+
+      .partner {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1366px) {
+  .ui.sidebar-right.sidebar {
+    width: 280px;
+  }
+}

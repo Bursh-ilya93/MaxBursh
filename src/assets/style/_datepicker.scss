@@ -1,0 +1,39 @@
+.react-datepicker {
+  border-radius: 0;
+
+  &__triangle {
+    border-bottom-color: #77C997;
+  }
+
+  .react-datepicker__navigation--next {
+    border-left-color: white;
+  }
+
+  .react-datepicker__navigation--previous {
+    border-right-color: white;
+  }
+
+  &__header {
+    background: #77C997;
+    border-bottom: 1px solid #06662C;
+  }
+
+  &__current-month, &__day-name {
+    color: white;
+    font-size: 14px;
+  }
+
+  &__day--selected {
+    border-radius: 0;
+    background: #06662C;
+    color: white;
+  }
+
+  &__day:hover {
+    border-radius: 0;
+  }
+
+  &__month {
+    margin: 0;
+  }
+}

@@ -1,0 +1,37 @@
+.ui.table {
+  //border-bottom: 1px solid #d4d4d5;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  color: #222222;
+  margin-top: 0 !important;
+
+  th {
+    padding: 0;
+  }
+
+  thead {
+    tr {
+      th, td {
+        height: 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    text-align: center;
+
+    tr {
+      td {
+        height: 30px;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  tr {
+    td {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.upload-file {
+  width: 630px;
+  height: 263px;
+  background: #FFFFFF;
+  border: 2px dashed #B5DFC5;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 176px;
+  padding-top: 85px;
+
+  p {
+    margin-bottom: 9px;
+
+    & > span {
+      &:nth-child(1) {
+        font-weight: 500;
+        font-size: 18px;
+        color: #9CD3A8;
+      }
+
+      &.second {
+        position: relative;
+        top: -1px;
+        font-size: 14px;
+        color: #129A48;
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    background: url("../images/passport.svg");
+    background-size: 106px;
+    width: 106px;
+    height: 106px;
+    position: absolute;
+    left: 32px;
+    top: 27%;
+  }
+
+  .upload-file__button {
+    width: 120px;
+    height: 30px;
+    background: #51BF7D;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+
+    label {
+      position: relative;
+      top: 7px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    input {
+      position: relative;
+      top: -20px;
+      opacity: 0;
+    }
+  }
+}
+
+.attention-data {
+  position: relative;
+  top: 1px;
+  width: 630px;
+  font-size: 16px;
+  color: #51BF7D;
+  border: 2px dashed #B5DFC5;
+  line-height: normal;
+  margin-bottom: 29px;
+  padding: 8px 8px 8px 70px;
+
+  &:before {
+    content: "!";
+    font-size: 24px;
+    font-weight: 900;
+    width: 70px;
+    position: absolute;
+    left: 32px;
+  }
+}

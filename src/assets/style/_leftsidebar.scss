@@ -1,0 +1,331 @@
+.ui.sidebar-left {
+
+  .input-filter {
+    .menu {
+      height: 200px;
+    }
+  }
+
+  &.sidebar {
+    overflow: hidden;
+    position: relative;
+    width: 235px;
+  }
+
+  & .accordion {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-top: 0 !important;
+
+    .title ~ .content, .accordion .title ~ .content {
+      width: 100%;
+      max-height: 0;
+      display: block;
+      //display: inline-table;
+      overflow: hidden;
+      transition: .4s linear;
+      padding: 0 !important;
+    }
+
+
+    &.open {
+      & > .title ~ .content {
+        display: block;
+        max-height: 10000px;
+      }
+    }
+
+    &.open {
+      span {
+        &:after {
+          border-bottom: none;
+        }
+      }
+
+      & > .title {
+        & > .icon-dropdown {
+          & > div {
+            top: 10px;
+            left: 0px;
+          }
+
+          animation-duration: 0.5s;
+        }
+      }
+    }
+  }
+
+  & .sport {
+    &:last-child span:after {
+      border-bottom: none !important;
+    }
+
+    .content {
+      box-sizing: content-box;
+      padding: 0;
+      //padding: 0 !important;
+      background: #979797;
+    }
+
+    span {
+      margin-left: 30px;
+      position: relative;
+      top: -1px;
+      height: 100%;
+      width: 88%;
+      display: inline-block;
+
+      &:after {
+        content: "";
+        position: absolute;
+        border: 0;
+        height: 1.5px;
+        width: 100%;
+        left: 0;
+        border-bottom: 1px solid #D8D8D8;
+        bottom: -4px;
+      }
+    }
+
+    .title {
+      padding: 4px 0 !important;
+      font-weight: normal !important;
+      color: #222222 !important;
+
+      a {
+        color: white !important;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      & ~ .content:not(.styled) {
+        position: relative;
+        padding: 0;
+      }
+    }
+  }
+
+  .icon {
+    &-sport {
+
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      left: 6px;
+      top: 5px;
+
+      path {
+        fill: #51BF7D;
+      }
+    }
+
+    &-dropdown {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 24px;
+      height: 100%;
+
+      & > div {
+        top: 4px;
+        right: -3px;
+        position: relative;
+      }
+
+      path {
+        fill: #BDBDBD;
+      }
+
+      &:hover {
+        background: #129A48;
+      }
+    }
+  }
+
+  .league {
+    display: inline-block;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 13px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+
+    &:hover {
+      background: #51BF7D;
+    }
+  }
+
+  .header {
+    margin: 0;
+    background: #353535;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px !important;
+    color: #FFFFFF !important;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    display: block;
+    width: 100%;
+
+  }
+
+  .buttons {
+    width: 100%;
+    height: 26px;
+    display: block;
+
+    span {
+      position: relative;
+      top: 1px;
+    }
+
+
+    .button {
+      position: relative;
+      background: #51BF7D;
+      border-right: 0;
+      border-radius: 0 !important;
+      color: white;
+      padding: 0;
+      width: 50%;
+      font-size: 11px !important;
+      outline: none !important;
+      box-shadow: none !important;
+
+      &:focus {
+        outline: none !important;
+      }
+    }
+
+    .button.no-active {
+      opacity: 1 !important;
+      display: inline-block;
+      font-size: 11px !important;
+      text-align: center;
+      padding: 0 !important;
+      height: 27px;
+      width: 50% !important;
+      color: #222222 !important;
+      background-color: #F7F7F7 !important;
+      cursor: pointer !important;
+      border-radius: 0 !important;
+      font-family: Roboto, 'sans-serif' !important;
+      font-style: normal !important;;
+      font-weight: normal !important;;
+      line-height: normal !important;;
+
+
+      &:first-child + .button.no-active {
+        &:before {
+          content: "";
+          width: 1px;
+          height: calc(100% - 6px);
+          position: absolute;
+          background: #D8D8D8;
+          top: 3px;
+          left: 0;
+        }
+      }
+    }
+
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer !important;
+    }
+  }
+
+  & .popular-sport {
+    & .title {
+      font-weight: normal !important;
+      position: relative;
+      font-size: 13px;
+      color: #222222 !important;
+
+      & .arrow {
+        width: 24px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        & > div {
+          position: relative;
+          //top: 4px;
+          //left: 6px
+        }
+
+        &:hover {
+          background: #129A48;
+        }
+      }
+    }
+
+    .accordion {
+      background-color: #D8D8D8 !important;
+
+      span {
+        margin-left: 9px;
+
+        &:after {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .popular-menu {
+    & > div span:after {
+      bottom: -6px;
+    }
+
+    & > div:nth-child(2) span:after {
+      bottom: -7px;
+    }
+
+    & > div:last-child span:after {
+      border-bottom: none !important;
+    }
+  }
+
+  .title {
+    background: #484848;
+    &:hover {
+      background: #51BF7D !important;
+      color: white !important;
+
+      span {
+        &:after {
+          border-bottom: none;
+        }
+      }
+
+      .icon-sport {
+        path {
+          fill: white !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .ui.sidebar-left.sidebar {
+    width: 190px;
+  }
+}

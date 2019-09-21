@@ -1,0 +1,261 @@
+.event {
+  &__weather {
+    background: rgba(18, 154, 72, 0.7) !important;
+    font-size: 13px !important;
+    height: 21px !important;
+
+    td {
+      color: #FFFFFF !important;
+    }
+
+    .weather {
+      text-align: left;
+      padding-left: 15px;
+    }
+  }
+
+  &.full {
+    border-bottom: 1px solid #D8D8D8;
+
+    background: #F7F7F7;
+
+    .event__main {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 0;
+
+      & > div {
+        &:nth-child(1) {
+          flex: 2;
+        }
+
+        &:nth-child(2) {
+
+          border-right: 0;
+        }
+
+        &:nth-child(3) {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .head-koeff-min {
+    vertical-align: top !important;
+
+    .dropdown {
+      height: 30px;
+      line-height: 10px;
+      padding-left: 10px;
+      border-radius: 0;
+    }
+
+    .menu {
+      text-indent: 15px;
+    }
+
+    .factors {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+
+      &__factor {
+        padding: 0 0 0 10px;
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+        background: #E8E8E8;
+        color: #222222;
+        font-weight: bold;
+        font-size: 13px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        border-left: 1px solid #c4c4c4;
+
+        &:first-child {
+          border-left: 0;
+        }
+
+        &.active {
+          background: $accent-color;
+          color: #fff;
+        }
+
+        span {
+          height: auto;
+          display: inline-block;
+          position: relative;
+        }
+
+        & > .lock-koeff {
+          width: 100%;
+          text-align: center;
+
+          & i.icon {
+            color: #ccc;
+          }
+        }
+
+        & .name {
+          width: 66%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        & .f-value {
+          text-decoration: underline;
+          text-align: center;
+          padding: 0 5px;
+        }
+
+        &:not(.disabled):hover {
+          background: $accent-color;
+          color: #fff;
+          cursor: pointer;
+        }
+
+        &.disabled:hover {
+          background: #ddd;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .dropdown {
+      border-radius: 0 !important;
+    }
+  }
+
+  & td, th {
+    margin-bottom: 1px;
+
+    & .rect {
+      $size: 30px;
+      width: 100%;
+      height: $size;
+      line-height: $size;
+      text-align: center;
+    }
+
+    & .timeout {
+      font-weight: bold;
+      color: $accent-color;
+    }
+
+    & .widgets {
+      padding-left: 6px;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding-right: 5px;
+      justify-content: space-between;
+
+      .star {
+        margin-left: auto;
+        justify-self: flex-end;
+        display: inline-block;
+        //margin-right: 6px;
+
+        svg {
+          width: 16px;
+          height: 16px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &.active {
+          path, g {
+            fill: #0BD75C !important;
+          }
+        }
+      }
+    }
+
+    & .teams {
+      display: block;
+      font-size: 14px;
+      color: #222222;
+      text-align: left;
+      line-height: 15px;
+      padding: 1px 5px;
+
+      &__team {
+        padding: 0;
+        margin: 0;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & .count-koeff {
+      position: relative;
+      font-weight: bold;
+      cursor: pointer;
+
+      & > .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    & .service {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 5px;
+      font-size: $base-font-size;
+
+      .inline-group {
+        display: flex;
+      }
+
+      .comment {
+        display: flex;
+        align-items: center;
+        color: #d4d4d5;
+
+        & a {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          display: inline-block;
+          margin-left: 2px;
+          text-decoration: underline;
+          color: $accent-color;
+          max-width: 200px;
+        }
+      }
+
+      .timeout {
+        padding-left: 5px;
+      }
+
+      .scores {
+        color: $red-color;
+        padding-right: 18px;
+      }
+    }
+  }
+
+  &__add {
+    display: none;
+
+    &.active {
+      display: table-row;
+    }
+  }
+}

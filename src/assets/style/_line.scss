@@ -1,0 +1,29 @@
+.line {
+  flex: 2;
+  margin: 0 5px 62px 5px;
+  @include maxHeightWithOverflow;
+
+  //.loader {
+  //  position: static !important;
+  //
+  //  &::before {
+  //    top: auto !important;
+  //  }
+  //
+  //  &::after {
+  //    top: auto !important;
+  //  }
+  //}
+
+  & .line-filter.accordion {
+    width: 100%;
+
+    .content {
+      .icon-sport {
+        &::before {
+          width: 0 !important;
+        }
+      }
+    }
+  }
+}

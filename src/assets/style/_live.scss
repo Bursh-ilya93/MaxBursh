@@ -1,0 +1,148 @@
+.live {
+  width: 810px;
+  margin-bottom: 58px;
+  position: relative;
+
+  .ui.loader {
+    top: 200px;
+  }
+
+  &.full {
+    flex: 2;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .ui.table {
+    background: none;
+    border: none;
+    box-shadow: none;
+
+    td {
+      padding: 0;
+    }
+  }
+
+  &__header {
+    //box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 5px;
+  }
+
+  .header {
+    position: relative;
+    background-color: #51BF7D;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+  }
+
+  .toolbar {
+    $size: 40px;
+    position: relative;
+    height: $size;
+    background: #129A48;
+    display: flex;
+
+    a, span {
+      width: $size;
+      height: 100%;
+      text-align: center;
+      padding: 8px 0;
+
+      &:hover {
+        transform: scale(.95);
+        background-color: #3F8C57;
+        cursor: pointer;
+      }
+
+      &.active, &.selected {
+        background-color: #51BF7D;
+      }
+    }
+
+    .fire {
+      outline: none;
+      height: 100%;
+      padding: 8px 0;
+      display: inline-block;
+      width: 40px;
+      border-radius: 0;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .camera, .tv {
+      position: absolute;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #F7F7F7;
+      }
+    }
+
+    .star {
+      &.active-favorites {
+        path {
+          fill: #FFE600;
+        }
+      }
+    }
+
+    .camera {
+      right: 40px;
+
+      & div {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+    }
+
+    .tv {
+      right: 0;
+
+      & div {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+    }
+
+    .icon-sport {
+      svg, g, path {
+        width: 24px;
+        height: 24px;
+        fill: #F7F7F7;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 1700px) {
+  .main-page {
+    .left {
+      width: 600px;
+
+      .live {
+        width: 600px;
+      }
+
+      .event {
+        .teams {
+          width: 145px;
+        }
+
+        .head-koeff-min {
+          min-width: 300px !important;
+        }
+      }
+    }
+
+    .right {
+      max-width: calc(100% - 600px);
+    }
+  }
+}
