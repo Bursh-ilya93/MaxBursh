@@ -74,7 +74,6 @@
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
     "shortid": "^2.2.14",
-    "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
     "validator": "^10.11.0",
@@ -101,7 +100,8 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "pure-react-carousel": "^1.17.0",
     "react-svg": "^7.2.6",
-    "semantic-ui-react": "^0.84.0"
+    "semantic-ui-react": "^0.84.0",
+    "style-loader": "^0.23.0"
   },
   "jest": {
     "collectCoverageFrom": [

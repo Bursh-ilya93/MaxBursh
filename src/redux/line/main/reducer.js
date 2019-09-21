@@ -27,7 +27,7 @@ export default function select(state = initState, action) {
 			const {leagues, sports, events, factors, additional_factors, additional_factors_count} = action.data;
 
 			let opened_sports = {...state.opened_sports};
-			sports.forEach((sport) => {
+			sports.forEach((sport) => {//<<<<<===========================================================================
 				opened_sports = ObjectHelper.add(opened_sports, sport.id);
 			});
 
